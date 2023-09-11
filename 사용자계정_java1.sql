@@ -93,3 +93,15 @@ select * from board where seq=7;
 -- 총 글수
 select count(*) from board;
 select count(id) from board;
+
+
+------------------------------------------------------mybatis
+-- usertable
+create table usertable(
+name varchar2(30) not null,
+id varchar2(30) primary key,
+pwd varchar2(30) not null);
+
+select * from usertable;
+
+SELECT * FROM usertable WHERE id LIKE '%n%';
