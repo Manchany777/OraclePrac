@@ -87,13 +87,16 @@ CREATE TABLE board(
 CREATE SEQUENCE seq_board  NOCACHE NOCYCLE;
 
 select * from board;
+rollback;
 
 -- boardView
 select * from board where seq=7;
 -- 총 글수
 select count(*) from board;
 select count(id) from board;
-
+update board set 
+ 	subject='좉망', content='다 수정되어버렸어...', logtime=sysdate
+ 	where seq=1;
 
 ------------------------------------------------------mybatis
 -- usertable
