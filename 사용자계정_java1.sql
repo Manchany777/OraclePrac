@@ -108,3 +108,9 @@ pwd varchar2(30) not null);
 select * from usertable;
 
 SELECT * FROM usertable WHERE id LIKE '%n%';
+
+-- 페이징 기능
+select * from
+(select rownum rn, tt.* from
+(select * from usertable) tt
+) where rn>=1 and rn<=2;
