@@ -114,3 +114,19 @@ select * from
 (select rownum rn, tt.* from
 (select * from usertable) tt
 ) where rn>=1 and rn<=2;
+
+select count(*) from usertable;
+
+-- 회원정보 수정 기능
+select * from usertable where id='hong';
+
+--이미지파일 업로드
+create table USERIMAGE (
+SEQ number primary key,
+IMAGENAME varchar2(50) not null,
+IMAGECONTENT varchar2(4000),
+IMAGE1 varchar2(200));
+
+create sequence SEQ_USERIMAGE nocycle nocache;
+
+select * from userimage;
